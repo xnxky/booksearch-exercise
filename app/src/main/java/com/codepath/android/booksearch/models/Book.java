@@ -6,12 +6,27 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Book {
+public class Book implements Serializable {
     private String openLibraryId;
     private String author;
     private String title;
+
+    private int numberOfPgaes;
+
+    private List<String> publisher;
+
+    public int getNumberOfPgaes() {
+        return numberOfPgaes;
+    }
+
+    public List<String> getPublisher() {
+        return publisher;
+    }
+
 
     public String getOpenLibraryId() {
         return openLibraryId;
@@ -43,6 +58,16 @@ public class Book {
                 book.openLibraryId = ids.getString(0);
             }
             book.title = jsonObject.has("title_suggest") ? jsonObject.getString("title_suggest") : "";
+
+            book.publisher = new ArrayList<>();
+            if(jsonObject.has("publishers")) {
+              JSONArray jsonPublishers = jsonObject.getJSONArray("publishers");
+              for(int pIdx=0; pIdx < jsonPublishers.length(); pIdx++) {
+                  book.publisher.add(jsonPublishers.getJSONObject(pIdx).getString("name"));
+              }
+            }
+
+            book.numberOfPgaes =jsonObject.has("number_of_pages") ? jsonObject.getInt("number_of_pages") : 0;
             book.author = getAuthor(jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
