@@ -42,6 +42,7 @@ This app leverages two third-party libraries:
 
 ## Updated Walkthough 
 
-<img src='https://github.com/xnxky/booksearch-exercise/blob/master/walkthough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/xnxky/booksearch-exercise/blob/master/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
