@@ -40,8 +40,8 @@ This app leverages two third-party libraries:
  * [Android AsyncHTTPClient](http://loopj.com/android-async-http/) - For asynchronous network requests
  * [Picasso](http://square.github.io/picasso/) - For remote image loading
 
-## Walkthough 
+## Updated Walkthough 
 
-<img src='https://github.com/xnxky/booksearch-exercise/blob/master/walkthough.git' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/xnxky/booksearch-exercise/blob/master/walkthough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
